@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="한번 추가한 휴강은 임의로 삭제할 수 없습니다. 삭제를 원할 경우 설정에서 전체삭제가 가능합니다." />
+ 
+    <ListView
+        android:id="@+id/myclass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    </ListView>
+
+
+ 
+        
+</LinearLayout>

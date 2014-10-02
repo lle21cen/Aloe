@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/timetablelayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp" >
+
+        <TextView
+            android:id="@+id/dateAndtime"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.31"
+            android:layout_gravity="center"
+            android:text="오늘날짜" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+        <Button
+            android:id="@+id/addclass"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/subplus" />
+
+        <TextView
+            android:id="@+id/tablename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="시간표 이름" />
+
+        <Button
+            android:id="@+id/remindcal"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/subchange"/>
+
+    </RelativeLayout>
+    
+     	<LinearLayout
+ 	    android:id="@+id/timeview1"
+        android:layout_width="25dp"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/dayview"
+        
+        android:layout_below="@+id/LinearLayout1"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true">
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/dayview"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_toRightOf="@+id/timeview"
+        android:background="@drawable/day"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+    
+    
+ 	<LinearLayout
+ 	    android:id="@+id/timeview"
+        android:layout_width="25dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottonbar"
+        android:layout_below="@+id/dayview"
+        android:orientation="vertical"
+        android:background="@drawable/timet"
+        android:layout_alignParentLeft="true">
+    </LinearLayout>
+    
+    
+        <RelativeLayout
+            android:id="@+id/timetable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottonbar"
+            android:layout_below="@+id/dayview"
+            android:background="@drawable/timeback"
+            android:layout_toRightOf="@+id/timeview" >
+
+           
+
+        </RelativeLayout>
+  <RelativeLayout
+        android:id="@+id/listlayout"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_gravity="center"
+        android:layout_above="@+id/bottonbar"
+        android:background="@drawable/pop"
+        android:visibility="invisible" >
+
+        <ListView
+            android:id="@+id/assignmentsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" >
+        </ListView>
+
+    </RelativeLayout>
+    
+      <Button
+        android:id="@+id/upBtn"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center|bottom"
+        android:layout_above="@+id/bottonbar"
+        android:background="@drawable/pop"
+        android:text="up" />
+  
+    <LinearLayout
+        android:id="@+id/bottonbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/timetablebot1"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/timebot1" />
+
+        <Button
+            android:id="@+id/timetablebot2"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/timebot2" />
+
+        <Button
+            android:id="@+id/timetablebot3"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/timebot3" />
+
+        <Button
+            android:id="@+id/timetablebot4"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/timebot4" />
+
+        <Button
+            android:id="@+id/timetablebot5"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/timebot5" />
+    </LinearLayout>
+
+</RelativeLayout>

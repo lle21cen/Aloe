@@ -1,0 +1,182 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/foodnametop" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/foodview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/stuRes"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:background="@drawable/studentfood" />
+
+            <Button
+                android:id="@+id/teachRes"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:background="@drawable/teacherfood" />
+
+            <Button
+                android:id="@+id/ScienceRes"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:background="@drawable/multifood" />
+
+            <Button
+                android:id="@+id/snackRes"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:background="@drawable/foodsnack" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/HorizontalScrollLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/koreanFood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/hanbun" />
+
+                <Button
+                    android:id="@+id/ChineseFood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/cha" />
+
+                <Button
+                    android:id="@+id/JapaneseFood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/jp" />
+
+                <Button
+                    android:id="@+id/WesternFood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/us" />
+
+                <Button
+                    android:id="@+id/WorldFood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/world" />
+
+                <Button
+                    android:id="@+id/Chicken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/chicken" />
+
+                <Button
+                    android:id="@+id/alcohol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/ach" />
+
+                <Button
+                    android:id="@+id/AllFood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/allres" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/random"
+            android:layout_width="190dp"
+            android:layout_height="220dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/random" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+         >
+
+        <Button
+            android:id="@+id/foodbot01"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:background="@drawable/foodbot1" />
+
+        <Button
+            android:id="@+id/foodbot02"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:background="@drawable/foodbot2" />
+
+        <Button
+            android:id="@+id/foodbot03"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:background="@drawable/foodbot3" />
+
+        <Button
+            android:id="@+id/foodbot04"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:background="@drawable/foodbot4" />
+
+        <Button
+            android:id="@+id/foodbot05"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/foodbot5" />
+    </LinearLayout>
+    
+</LinearLayout>

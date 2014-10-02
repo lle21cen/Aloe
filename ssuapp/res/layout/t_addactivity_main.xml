@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.selectsubject.MainActivity" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="범위 설정" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 1.단대" />
+
+    <Spinner
+        android:id="@+id/college"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 2.학부" />
+
+    <Spinner
+        android:id="@+id/faculty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 3.과" />
+
+    <Spinner
+        android:id="@+id/major"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/subject_major"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전공" />
+
+        <RadioButton
+            android:id="@+id/subject_mandatory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="교필" />
+
+        <RadioButton
+            android:id="@+id/subject_choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="교선" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/searchName"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/search" />
+
+        <EditText
+            android:id="@+id/inputSubjectName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/searchName"
+            android:focusable="true"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:focusableInTouchMode="true"
+            android:hint="과목명 or 과목코드 입력" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/subjectList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

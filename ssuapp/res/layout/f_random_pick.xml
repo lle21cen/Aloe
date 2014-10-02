@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+     <View
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/ramfoodtop" />
+     
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp" >
+
+        <Button
+            android:id="@+id/ramchinesefood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ramkoreafood"
+            android:background="@drawable/cha" />
+
+        <Button
+            android:id="@+id/ramall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ramchicken"
+            android:layout_toRightOf="@+id/ramalcohol"
+            android:background="@drawable/allram" />
+
+        <Button
+            android:id="@+id/ramchicken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ramkoreafood"
+            android:layout_below="@+id/ramwesternfood"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/chicken" />
+
+        <Button
+            android:id="@+id/ramworldfood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ramwesternfood"
+            android:layout_alignTop="@+id/ramwesternfood"
+            android:background="@drawable/world" />
+
+        <Button
+            android:id="@+id/ramkoreafood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/hanbun" />
+
+        <Button
+            android:id="@+id/ramwesternfood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ramkoreafood"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/us" />
+
+        <Button
+            android:id="@+id/ramjapanesfood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ramchinesefood"
+            android:background="@drawable/jp" />
+
+        <Button
+            android:id="@+id/ramalcohol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ramchicken"
+            android:layout_toRightOf="@+id/ramchicken"
+            android:background="@drawable/ach" />
+    </RelativeLayout>
+
+		<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+         >
+        <Button
+            android:id="@+id/foodbot01"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:background="@drawable/foodbot1" />
+
+        <Button
+            android:id="@+id/foodbot02"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:background="@drawable/foodbot2" />
+
+        <Button
+            android:id="@+id/foodbot03"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:background="@drawable/foodbot3" />
+
+        <Button
+            android:id="@+id/foodbot04"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:background="@drawable/foodbot4" />
+
+        <Button
+            android:id="@+id/foodbot05"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/foodbot5" />
+	</LinearLayout>
+</LinearLayout>

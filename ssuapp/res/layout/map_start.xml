@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    //위에 이름
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/campusnametop" />
+    
+     <TextView
+        android:id="@+id/sel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="#FF0066"
+        android:text="▼찾고 싶은 장소를 선택해주세요"
+        android:textSize="10dp" />
+     
+   <TextView
+        android:id="@+id/selected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="#FF0066"
+         />
+    
+   
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="345dp" >
+
+          <!-- 매점레이아웃 -->
+        <RelativeLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/mapImage1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/map" />
+
+            <!--학생회관  -->
+            <ImageButton
+                android:id="@+id/mae1" 
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+               android:layout_marginLeft="110dp"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/maebtn" />
+            <!--전산관 -->
+             <!--정보대  -->
+        </RelativeLayout>
+
+        
+        <!-- 휴대폰충전기레이아웃 -->
+        <RelativeLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/mapImage2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/map" />
+            <ImageButton
+                android:id="@+id/ph2"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="108dp"
+                android:src="@drawable/phbtn" />
+        </RelativeLayout>
+
+         <!-- ATM레이아웃 -->
+        <RelativeLayout
+            android:id="@+id/layout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/mapImage3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/map" />
+
+            <ImageButton
+                android:id="@+id/atm1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                 android:layout_marginLeft="315dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/atmbtn" />
+            <ImageButton
+                android:id="@+id/atm2"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                 android:layout_marginLeft="145dp"
+                android:layout_marginTop="200dp"
+                android:src="@drawable/atmbtn" />
+
+            <ImageButton
+                android:id="@+id/mae2"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_below="@+id/atm2"
+                android:layout_marginLeft="69dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/atm2"
+                android:src="@drawable/maebtn" />
+
+            <ImageButton
+                android:id="@+id/mae3"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="28dp"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@+id/mae2"
+                android:src="@drawable/maebtn" />
+
+            <ImageButton
+                android:id="@+id/ph1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignLeft="@+id/mae3"
+                android:layout_alignTop="@+id/mae3"
+                android:src="@drawable/phbtn" />
+
+        </RelativeLayout>
+    </FrameLayout>
+    
+    
+    
+    
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" 
+        android:gravity="center_horizontal|center_vertical"
+        android:text="장소"
+        android:textSize="20dp"/>
+    
+    
+    
+    
+    
+    
+    
+    
+    /*----------------------아래 메뉴버튼----------------------*/
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+         >
+      <Button
+            android:id="@+id/camfoot1"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:background="@drawable/campusbot1" />
+
+        <Button
+            android:id="@+id/camfoot2"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:background="@drawable/campusbot2" />
+
+        <Button
+            android:id="@+id/camfoot3"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:background="@drawable/campusbot3" />
+
+        <Button
+            android:id="@+id/camfoot4"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:background="@drawable/campusbot4" />
+
+        <Button
+            android:id="@+id/camfoot5"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/campusbot5" />
+         </LinearLayout>
+         
+
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aloes.ssu"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <permission
+        android:name="com.aloes.ssu.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.aloes.ssu.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.aloes.ssu" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.aloes.ssu.Main"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.aloes.ssu.food.MainActivity" >
+        </activity>
+        <activity android:name="com.aloes.ssu.food.RandomPick" >
+        </activity>
+        <activity android:name="com.aloes.ssu.food.EatActivity" >
+        </activity>
+        <activity android:name="com.aloes.ssu.food.RestaurantNameDB" >
+        </activity>
+        <activity android:name="com.aloes.ssu.food.koreanFoodList" >
+        </activity>
+        <activity android:name="com.aloes.ssu.food.ChungWoonActivity" >
+        </activity>
+        <activity android:name="com.aloes.ssu.food.SelectedResActivity" >
+        </activity>
+        <activity android:name="com.aloes.ssu.campusmap.MapStartActivity" >
+        </activity>
+        <activity android:name="com.aloes.ssu.schoolinfo.SchoolinfoActivity" >
+        </activity>
+        <activity android:name="com.aloes.ssu.schoolinfo.Detile" >
+        </activity>
+        <activity android:name="com.aloes.ssu.schoolinfo.Info" >
+        </activity>
+        <activity android:name="com.aloes.ssu.timetable.addActivity" >
+        </activity>
+        <activity android:name="com.aloes.ssu.timetable.noclass" >
+        </activity>
+        <activity android:name="com.aloes.ssu.timetable.AddClass" >
+        </activity>
+        <activity android:name="com.aloes.ssu.timetable.AddGwa" >
+        </activity>
+        <activity android:name="com.aloes.ssu.timetable.SelectScreen" >
+        </activity>
+        <activity android:name="com.aloes.ssu.timetable.TimetableMain" >
+        </activity>
+        <activity android:name="com.aloes.ssu.timetable.supplementaryclass" >
+        </activity>
+        <activity android:name="com.aloes.ssu.timetable.MainActivity" >
+        </activity>
+        <activity android:name="com.aloes.ssu.timetable.TestActivity" >
+        </activity>
+        <activity android:name="com.aloes.ssu.food.WorldfoodList" >
+        </activity>
+        <activity android:name="com.aloes.ssu.food.BarList" >
+        </activity>
+        <activity android:name="com.aloes.ssu.food.ChinesefoodList" >
+        </activity>
+        <activity android:name="com.aloes.ssu.food.JapanesefoodList" >
+        </activity>
+        <activity android:name="com.aloes.ssu.food.WesternfoodList" >
+        </activity>
+        <activity android:name="com.aloes.ssu.food.ChickenList" >
+        </activity>
+        <activity android:name="com.aloes.ssu.food.AllFoodList" >
+        </activity>
+        <activity android:name="com.aloes.ssu.setting.SettingStartActivity"></activity>
+
+        <service android:name=".GCMIntentService" />
+    </application>
+
+</manifest>
