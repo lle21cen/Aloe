@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
 import com.aloes.ssu.BackPressCloseHandler;
 import com.aloes.ssu.R;
@@ -28,9 +27,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.f_main);
-		  backPressCloseHandler = new BackPressCloseHandler(this);
-
-		final LinearLayout foodlayout = (LinearLayout) findViewById(R.layout.f_random_pick);
+		backPressCloseHandler = new BackPressCloseHandler(this);
 
 		Button toRandomPickActivity = (Button) findViewById(R.id.random);
 
@@ -150,16 +147,6 @@ public class MainActivity extends Activity {
 
 		// 음식별종류
 		final Button koreanFood = (Button) findViewById(R.id.koreanFood);
-		koreanFood.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(getBaseContext(),
-						koreanFoodList.class);
-				startActivityForResult(intent, 1002);
-
-			}
-		});
 
 		koreanFood.setOnTouchListener(new OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
@@ -169,6 +156,12 @@ public class MainActivity extends Activity {
 					break;
 				case MotionEvent.ACTION_UP:
 					koreanFood.setBackgroundResource(R.drawable.hanbun);
+					Intent intent = new Intent(getBaseContext(),
+							koreanFoodList.class);
+					startActivityForResult(intent, 1002);
+					break;
+				case MotionEvent.ACTION_CANCEL:
+					koreanFood.setBackgroundResource(R.drawable.hanbun);
 					break;
 				}
 				return false;
@@ -176,17 +169,6 @@ public class MainActivity extends Activity {
 		});
 
 		final Button flourFood = (Button) findViewById(R.id.WorldFood);
-
-		flourFood.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(getBaseContext(),
-						WorldfoodList.class);
-				startActivityForResult(intent, 1002);
-
-			}
-		});
 
 		flourFood.setOnTouchListener(new OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
@@ -196,6 +178,12 @@ public class MainActivity extends Activity {
 					break;
 				case MotionEvent.ACTION_UP:
 					flourFood.setBackgroundResource(R.drawable.world);
+					Intent intent = new Intent(getBaseContext(),
+							WorldfoodList.class);
+					startActivityForResult(intent, 1002);
+					break;
+				case MotionEvent.ACTION_CANCEL:
+					flourFood.setBackgroundResource(R.drawable.world);
 					break;
 				}
 				return false;
@@ -203,17 +191,7 @@ public class MainActivity extends Activity {
 		});
 
 		final Button Chicken = (Button) findViewById(R.id.Chicken);
-		
-		Chicken.setOnClickListener(new OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(getBaseContext(),
-						ChickenList.class);
-				startActivityForResult(intent, 1002);
-
-			}
-		});
 		Chicken.setOnTouchListener(new OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
 				switch (event.getAction()) {
@@ -222,6 +200,12 @@ public class MainActivity extends Activity {
 					break;
 				case MotionEvent.ACTION_UP:
 					Chicken.setBackgroundResource(R.drawable.chicken);
+					Intent intent = new Intent(getBaseContext(),
+							ChickenList.class);
+					startActivityForResult(intent, 1002);
+					break;
+				case MotionEvent.ACTION_CANCEL:
+					Chicken.setBackgroundResource(R.drawable.chicken);
 					break;
 				}
 				return false;
@@ -229,7 +213,7 @@ public class MainActivity extends Activity {
 		});
 
 		final Button AllFood = (Button) findViewById(R.id.AllFood);
-		
+
 		AllFood.setOnTouchListener(new OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
 				switch (event.getAction()) {
@@ -241,6 +225,9 @@ public class MainActivity extends Activity {
 					Intent intent = new Intent(getBaseContext(),
 							AllFoodList.class);
 					startActivityForResult(intent, 1002);
+					break;
+				case MotionEvent.ACTION_CANCEL:
+					AllFood.setBackgroundResource(R.drawable.allres);
 					break;
 				}
 				return false;
@@ -261,6 +248,9 @@ public class MainActivity extends Activity {
 							JapanesefoodList.class);
 					startActivityForResult(intent, 1002);
 					break;
+				case MotionEvent.ACTION_CANCEL:
+					JapaneseFood.setBackgroundResource(R.drawable.jp);
+					break;
 				}
 				return false;
 			}
@@ -279,6 +269,9 @@ public class MainActivity extends Activity {
 					Intent intent = new Intent(getBaseContext(),
 							ChinesefoodList.class);
 					startActivityForResult(intent, 1002);
+					break;
+				case MotionEvent.ACTION_CANCEL:
+					ChineseFood.setBackgroundResource(R.drawable.cha);
 					break;
 				}
 				return false;
@@ -299,7 +292,11 @@ public class MainActivity extends Activity {
 							WesternfoodList.class);
 					startActivityForResult(intent, 1002);
 					break;
+				case MotionEvent.ACTION_CANCEL:
+					WesternFood.setBackgroundResource(R.drawable.us);
+					break;
 				}
+
 				return false;
 			}
 		});
@@ -314,9 +311,11 @@ public class MainActivity extends Activity {
 					break;
 				case MotionEvent.ACTION_UP:
 					alcohol.setBackgroundResource(R.drawable.ach);
-					Intent intent = new Intent(getBaseContext(),
-							BarList.class);
+					Intent intent = new Intent(getBaseContext(), BarList.class);
 					startActivityForResult(intent, 1002);
+					break;
+				case MotionEvent.ACTION_CANCEL:
+					alcohol.setBackgroundResource(R.drawable.ach);
 					break;
 				}
 				return false;
@@ -338,15 +337,16 @@ public class MainActivity extends Activity {
 				return false;
 			}
 		});
-		
+
 		foodbot1.setOnClickListener(new OnClickListener() {
- 			@Override
- 			public void onClick(View v) {
- 				Intent intent = new Intent(getBaseContext(), TimetableMain.class);
- 				startActivityForResult(intent, 1003);
- 				finish();
- 			}
- 		});
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getBaseContext(),
+						TimetableMain.class);
+				startActivityForResult(intent, 1003);
+				finish();
+			}
+		});
 
 		final Button foodbot2 = (Button) findViewById(R.id.foodbot02);
 
@@ -364,12 +364,13 @@ public class MainActivity extends Activity {
 			}
 		});
 		foodbot2.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(getBaseContext(), SchoolinfoActivity.class);
-				startActivityForResult(intent, 1003);	
+				Intent intent = new Intent(getBaseContext(),
+						SchoolinfoActivity.class);
+				startActivityForResult(intent, 1003);
 				finish();
 			}
 		});
@@ -404,15 +405,16 @@ public class MainActivity extends Activity {
 				return false;
 			}
 		});
-    	foodbot4.setOnClickListener(new OnClickListener() {
-		@Override
-		public void onClick(View v) {
-			Intent intent = new Intent(getBaseContext(), MapStartActivity.class);
-			startActivityForResult(intent, 1003);
-			finish();
-			
-		}
-	});
+		foodbot4.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getBaseContext(),
+						MapStartActivity.class);
+				startActivityForResult(intent, 1003);
+				finish();
+
+			}
+		});
 
 		final Button foodbot5 = (Button) findViewById(R.id.foodbot05);
 
@@ -429,14 +431,15 @@ public class MainActivity extends Activity {
 				return false;
 			}
 		});
-		
+
 		foodbot5.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(getBaseContext(),SettingStartActivity.class);
+				Intent intent = new Intent(getBaseContext(),
+						SettingStartActivity.class);
 				startActivityForResult(intent, 1003);
 				finish();
-				
+
 			}
 		});
 
@@ -466,10 +469,10 @@ public class MainActivity extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 
-    @Override
-    public void onBackPressed() {
-        //super.onBackPressed();
-        backPressCloseHandler.onBackPressed();
-    }
+	@Override
+	public void onBackPressed() {
+		// super.onBackPressed();
+		backPressCloseHandler.onBackPressed();
+	}
 
 }

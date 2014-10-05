@@ -48,7 +48,7 @@ public class MainActivity extends Activity {
 	ArrayList<Integer> subjectCodes = new ArrayList<Integer>();
 
 	String[] collegeItems = { "금융학부", "인문대학", "자연과학대학", "법과대학", "사회과학대학",
-			"경제통상학과", "공과대학", "IT대학", "경영대학" }, facultyItems, majorItems;
+			"경제통상대학", "공과대학", "IT대학", "경영대학" }, facultyItems, majorItems;
 
 	EditText subjectName;
 	Spinner collegeSpinner, facultySpinner, majorSpinner;
@@ -224,9 +224,29 @@ public class MainActivity extends Activity {
 			public boolean onEditorAction(TextView v, int actionId,
 					KeyEvent event) {
 				if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+					if (subjectNames.size() > 0) {
+						mAdapter.clearItem();
+						String name = subjectName.getText().toString();
+						long code = doParseLong(name);
+						cursor.moveToFirst();
+
+						for (int i = 0; i < cursor.getCount(); i++) {
+							if (subjectNames.get(i).contains(name)
+									|| code == cursor.getLong(5)) {
+
+								mAdapter.addItem(new subjectListItem(subjectType,
+										cursor.getString(0), cursor.getString(1),
+										cursor.getString(2), cursor.getString(3),
+										cursor.getString(4), cursor.getString(6)));
+							}
+							cursor.moveToNext();
+						}
+						subjectList.setAdapter(mAdapter);
+					}
+				
 					InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 					imm.hideSoftInputFromWindow(subjectName.getWindowToken(), 0);
-
+					
 					return true;
 				}
 				return false;
@@ -341,7 +361,7 @@ public class MainActivity extends Activity {
 			facultyItems = new String[] { "사회복지학부", "행정학부", "정치외교학과", "정보사회학과",
 					"언론홍보학과" };
 		} else if (collegeSpinner.getSelectedItemPosition() == 5) {
-			facultyItems = new String[] { "경제학과", "글로벌통상학과" };
+			facultyItems = new String[] { "경제학과", "글로벌통상학과", "금융경제학과", "국제무역학과", "경제국제통상학부" };
 		} else if (collegeSpinner.getSelectedItemPosition() == 6) {
 			facultyItems = new String[] { "화학공학과", "유기신소재파이버공학과", "전기공학부",
 					"기계공학과", "산업정보시스템공학과", "건축학부" };

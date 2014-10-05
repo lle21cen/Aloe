@@ -40,7 +40,6 @@ public class supplementaryclass extends Activity{
     int noday;
     int id;
    
-   
    protected void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
       setContentView(R.layout.t_supplementaryclass);
@@ -172,7 +171,6 @@ public class supplementaryclass extends Activity{
                ETstartH.setText(hourOfDay+"");
                ETstartM.setText(minute+"");
                starttime = hourOfDay+(float)((float)minute/(float)60.0);
-
            }
        };
        TimePickerDialog alert = new TimePickerDialog(this, 

@@ -1,17 +1,22 @@
 package com.aloes.ssu.timetable;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.DatePicker;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.aloes.ssu.R;
 
@@ -27,6 +32,8 @@ public class noclass extends Activity {
 	int id;
 	SQLiteDatabase db;
 	DatabaseHelper helper;
+	String[] name;
+	ArrayList<String> names = new ArrayList<String>();
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -36,7 +43,7 @@ public class noclass extends Activity {
 		Intent i = getIntent();
 		index = i.getExtras().getInt("index");
 		int[] week = i.getExtras().getIntArray("week");
-		String[] name = i.getStringArrayExtra("name");
+		name = i.getStringArrayExtra("name");
 
 		for (int j = 0; j < index; j++) {
 			switch (week[j]) {
@@ -60,10 +67,15 @@ public class noclass extends Activity {
 				break;
 			}
 		}
+		for (int j = 0; j < name.length; j++) {
+			if (name[j] != null)
+				names.add(name[j]);
+		}
 
 		ListView list = (ListView) findViewById(R.id.myclass);
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-				android.R.layout.simple_list_item_1, name);
+
+		NoClassAdapter adapter = new NoClassAdapter(this);
+
 		list.setAdapter(adapter);
 
 		list.setOnItemClickListener(new ListViewItemClickListener());
@@ -109,5 +121,41 @@ public class noclass extends Activity {
 				long id) {
 			DialogDatePicker(position);
 		}
+	}
+
+	class NoClassAdapter extends BaseAdapter {
+
+		Context mContext;
+
+		public NoClassAdapter(Context context) {
+			mContext = context;
+
+		}
+
+		@Override
+		public int getCount() {
+			return names.size();
+		}
+
+		@Override
+		public Object getItem(int position) {
+			return names.get(position);
+		}
+
+		@Override
+		public long getItemId(int position) {
+			return position;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			TextView aText = new TextView(mContext);
+			aText.setTextSize(15);
+
+			aText.setText(names.get(position));
+
+			return aText;
+		}
+
 	}
 }
