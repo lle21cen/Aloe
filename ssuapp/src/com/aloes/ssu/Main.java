@@ -167,6 +167,7 @@ public class Main extends Activity {
 		@Override
 		public void onClick(View v) {
 			Intent intent = new Intent(getBaseContext(), MapStartActivity.class);
+			//Intent intent = new Intent(getBaseContext(), navermaptest.class);
 			startActivityForResult(intent, 1003);
 			finish();
 			

@@ -39,106 +39,18 @@
         android:layout_height="345dp" >
 
           <!-- 매점레이아웃 -->
-        <RelativeLayout
+      	<RelativeLayout
             android:id="@+id/layout1"
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
-            <ImageView
-                android:id="@+id/mapImage1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/map" />
-
-            <!--학생회관  -->
-            <ImageButton
-                android:id="@+id/mae1" 
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-               android:layout_marginLeft="110dp"
-                android:layout_marginTop="100dp"
-                android:src="@drawable/maebtn" />
-            <!--전산관 -->
-             <!--정보대  -->
+    
         </RelativeLayout>
 
         
         <!-- 휴대폰충전기레이아웃 -->
-        <RelativeLayout
-            android:id="@+id/layout2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <ImageView
-                android:id="@+id/mapImage2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/map" />
-            <ImageButton
-                android:id="@+id/ph2"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginLeft="175dp"
-                android:layout_marginTop="108dp"
-                android:src="@drawable/phbtn" />
-        </RelativeLayout>
 
          <!-- ATM레이아웃 -->
-        <RelativeLayout
-            android:id="@+id/layout3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <ImageView
-                android:id="@+id/mapImage3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/map" />
-
-            <ImageButton
-                android:id="@+id/atm1"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                 android:layout_marginLeft="315dp"
-                android:layout_marginTop="60dp"
-                android:src="@drawable/atmbtn" />
-            <ImageButton
-                android:id="@+id/atm2"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                 android:layout_marginLeft="145dp"
-                android:layout_marginTop="200dp"
-                android:src="@drawable/atmbtn" />
-
-            <ImageButton
-                android:id="@+id/mae2"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_below="@+id/atm2"
-                android:layout_marginLeft="69dp"
-                android:layout_marginTop="15dp"
-                android:layout_toRightOf="@+id/atm2"
-                android:src="@drawable/maebtn" />
-
-            <ImageButton
-                android:id="@+id/mae3"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="28dp"
-                android:layout_marginLeft="14dp"
-                android:layout_toRightOf="@+id/mae2"
-                android:src="@drawable/maebtn" />
-
-            <ImageButton
-                android:id="@+id/ph1"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_alignLeft="@+id/mae3"
-                android:layout_alignTop="@+id/mae3"
-                android:src="@drawable/phbtn" />
-
-        </RelativeLayout>
     </FrameLayout>
     
     

@@ -104,6 +104,8 @@
         </activity>
         <activity android:name="com.aloes.ssu.setting.SettingStartActivity"></activity>
 
+        <activity android:name="com.aloes.ssu.campusmap.navermaptest"></activity>
+        
         <service android:name=".GCMIntentService" />
     </application>
 
