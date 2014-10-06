@@ -361,7 +361,7 @@ public class MainActivity extends Activity {
 			facultyItems = new String[] { "사회복지학부", "행정학부", "정치외교학과", "정보사회학과",
 					"언론홍보학과" };
 		} else if (collegeSpinner.getSelectedItemPosition() == 5) {
-			facultyItems = new String[] { "경제학과", "글로벌통상학과", "금융경제학과", "국제무역학과", "경제국제통상학부" };
+			facultyItems = new String[] { "경제학과", "글로벌통상학과", "금융경제학과", "국제무역학과" };
 		} else if (collegeSpinner.getSelectedItemPosition() == 6) {
 			facultyItems = new String[] { "화학공학과", "유기신소재파이버공학과", "전기공학부",
 					"기계공학과", "산업정보시스템공학과", "건축학부" };
